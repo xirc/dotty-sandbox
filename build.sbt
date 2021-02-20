@@ -5,8 +5,20 @@ lazy val root = project
   .settings(
     name := "dotty-simple",
     version := "0.1.0",
-
     scalaVersion := dottyVersion,
-
-    libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test"
+    libraryDependencies ++= Seq(
+      "org.scalactic" %% "scalactic" % "3.2.2",
+      "org.scalatest" %% "scalatest" % "3.2.2" % Test,
+    ),
   )
+
+addCommandAlias(
+  "ciCheck",
+  Seq(
+    "clean",
+    "scalafmtSbtCheck",
+    "scalafmtCheckAll",
+    "test:compile",
+    "test",
+  ).mkString(";"),
+)
