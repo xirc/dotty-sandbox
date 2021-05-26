@@ -10,6 +10,14 @@ lazy val root = project
   )
 
 addCommandAlias(
+  "ciFormat",
+  Seq(
+    "scalafmtSbt",
+    "scalafmtAll",
+  ).mkString(";"),
+)
+
+addCommandAlias(
   "ciCheck",
   Seq(
     "clean",
