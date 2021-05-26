@@ -1,1 +1,0 @@
-object UnionTypeExample extends App {}
