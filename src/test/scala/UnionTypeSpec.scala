@@ -13,7 +13,7 @@ object UnionTypeSpec {
 }
 
 /** See
-  *  - https://dotty.epfl.ch/docs/reference/new-types/union-types.html
+  *   - https://dotty.epfl.ch/docs/reference/new-types/union-types.html
   */
 final class UnionTypeSpec extends BaseSpec {
 

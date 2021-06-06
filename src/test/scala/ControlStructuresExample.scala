@@ -4,21 +4,15 @@ private final class ControlStructuresExample extends BaseSpec {
 
     val x = 1
     val s1 =
-      if x < 0 then
-        "negative"
-      else if x == 0 then
-        "zero"
-      else
-        "positive"
+      if x < 0 then "negative"
+      else if x == 0 then "zero"
+      else "positive"
     assert(s1 == "positive")
 
     val s2 =
-      if (x < 0) then
-        "negative"
-      else if (x == 0) then
-        "zero"
-      else
-        "positive"
+      if (x < 0) then "negative"
+      else if (x == 0) then "zero"
+      else "positive"
     assert(s2 == "positive")
 
     val s3 =
@@ -40,8 +34,7 @@ private final class ControlStructuresExample extends BaseSpec {
     for (i <- ints) do println(i)
 
     // Example 3
-    for i <- ints do
-      println(i)
+    for i <- ints do println(i)
 
   }
 
@@ -56,15 +49,13 @@ private final class ControlStructuresExample extends BaseSpec {
     for
       i <- ints if i % 2 == 0
       j <- ints if j % 2 == 1
-    do
-      println(s"$i $j")
+    do println(s"$i $j")
 
     // Example 3
     for {
       i <- ints if i % 2 == 0
       j <- ints if j % 2 == 1
-    } do
-      println(s"$i $j")
+    } do println(s"$i $j")
 
   }
 
@@ -105,33 +96,30 @@ private final class ControlStructuresExample extends BaseSpec {
 
     val x = Option(1)
     val s = x match
-      case None => "???"
+      case None              => "???"
       case Some(v) if v == 0 => "zero"
-      case Some(v) if v > 0 => "positive"
-      case Some(v) => "negative"
+      case Some(v) if v > 0  => "positive"
+      case Some(v)           => "negative"
     assert(s == "positive")
 
   }
 
   "try/catch/finally" in {
 
-    try
-      ???
+    try ???
     catch
       case arithmeticException: ArithmeticException =>
         arithmeticException.printStackTrace()
       case others: Throwable =>
         others.printStackTrace()
-    finally
-      println("cleanup")
+    finally println("cleanup")
 
   }
 
   "while" in {
     var x = 1
 
-    while x < 3
-    do
+    while x < 3 do
       println(x)
       x += 1
 
