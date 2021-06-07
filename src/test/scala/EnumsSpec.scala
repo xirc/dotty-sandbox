@@ -1,4 +1,4 @@
-object EnumSpec {
+object EnumsSpec {
 
   enum Size:
     case Small, Medium, Large
@@ -13,12 +13,25 @@ object EnumSpec {
     def b: Int = (rgba >> 8) & 0x000000ff
     def a: Int = rgba & 0x000000ff
 
+  enum Option[+T]:
+    case Some(x: T)
+    case None
+
+    def isEmpty: Boolean = this match {
+      case None    => true
+      case Some(_) => false
+    }
+
+  object Option:
+    def apply[T](x: T): Option[T] =
+      if x == null then None else Some(x)
+
 }
 
 /** [[https://dotty.epfl.ch/docs/reference/enums/enums.html Enumerations]]
   */
-final class EnumSpec extends BaseSpec {
-  import EnumSpec._
+final class EnumsSpec extends BaseSpec {
+  import EnumsSpec._
 
   "basic" in {
 
@@ -61,6 +74,15 @@ final class EnumSpec extends BaseSpec {
     assert(red.g == 0)
     assert(red.b == 0)
     assert(red.a == 255)
+
+  }
+
+  "Algebraic Data Types" in {
+
+    val someOrNone = if true then Option.Some(1) else Option.None
+    assert(someOrNone == Option(1))
+    assert(Option.Some(1).isEmpty == false)
+    assert(None.isEmpty)
 
   }
 
