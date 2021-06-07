@@ -1,4 +1,4 @@
-object EnumSpec {
+object EnumsSpec {
 
   enum Size:
     case Small, Medium, Large
@@ -17,8 +17,8 @@ object EnumSpec {
 
 /** [[https://dotty.epfl.ch/docs/reference/enums/enums.html Enumerations]]
   */
-final class EnumSpec extends BaseSpec {
-  import EnumSpec._
+final class EnumsSpec extends BaseSpec {
+  import EnumsSpec._
 
   "basic" in {
 
