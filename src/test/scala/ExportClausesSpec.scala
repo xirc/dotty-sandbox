@@ -21,8 +21,8 @@ object ExportClausesSpec {
       }
 
   class Converter[A](parser: Parser[A], formatter: Formatter[A]):
-    export formatter.{apply => _, *}
-    export parser.{apply => _, *}
+    export formatter.{apply as _, *}
+    export parser.{apply as _, *}
     def convert(value: String, f: A => A): String = {
       val from = parse(value)
       val to = f(from)

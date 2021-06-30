@@ -11,7 +11,7 @@ object AutomaticEtaExpansionSpec {
   *   - [[https://dotty.epfl.ch/docs/reference/changed-features/eta-expansion-spec.html Automatic Eta Expansion - More Details]]
   */
 final class AutomaticEtaExpansionSpec extends BaseSpec {
-  import AutomaticEtaExpansionSpec._
+  import AutomaticEtaExpansionSpec.*
 
   "Automatic Eta Expansion" in {
 

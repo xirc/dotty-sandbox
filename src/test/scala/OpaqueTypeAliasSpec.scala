@@ -55,7 +55,7 @@ object OpaqueTypeAliasSpec {
 
 /** [[https://dotty.epfl.ch/docs/reference/other-new-features/opaques.html Opaque Type Alias]] */
 final class OpaqueTypeAliasSpec extends BaseSpec {
-  import OpaqueTypeAliasSpec._
+  import OpaqueTypeAliasSpec.*
 
   "Logarithm" in {
 

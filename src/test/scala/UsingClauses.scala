@@ -37,7 +37,7 @@ object UsingClauses {
 
 /** [[https://dotty.epfl.ch/docs/reference/contextual/using-clauses.html Using Clauses]] */
 final class UsingClauses extends BaseSpec {
-  import UsingClauses._
+  import UsingClauses.*
 
   "Context Parameters" in {
 

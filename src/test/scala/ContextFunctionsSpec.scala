@@ -69,7 +69,7 @@ final class ContextFunctionsSpec extends BaseSpec {
 
   "Basic" in {
 
-    import ContextFunctionsSpec.Basic._
+    import ContextFunctionsSpec.Basic.*
     import scala.concurrent.ExecutionContext.Implicits.global
 
     assert(f(1) == 1)
@@ -82,7 +82,7 @@ final class ContextFunctionsSpec extends BaseSpec {
 
   "Builder Pattern" in {
 
-    import ContextFunctionsSpec.BuilderPattern._
+    import ContextFunctionsSpec.BuilderPattern.*
 
     val tab = table {
       row {
@@ -104,7 +104,7 @@ final class ContextFunctionsSpec extends BaseSpec {
 
   "PostConditions" in {
 
-    import ContextFunctionsSpec.PostConditions._
+    import ContextFunctionsSpec.PostConditions.*
 
     val s = Seq.tabulate(10)(_ + 1).sum.ensure(result == 55)
     assert(s == 55)

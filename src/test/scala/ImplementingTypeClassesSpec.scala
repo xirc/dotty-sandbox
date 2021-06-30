@@ -80,7 +80,7 @@ object ImplementingTypeClassesSpec {
 /** [[https://dotty.epfl.ch/docs/reference/contextual/type-classes.html Implimenting Type classes]]
   */
 final class ImplementingTypeClassesSpec extends BaseSpec {
-  import ImplementingTypeClassesSpec._
+  import ImplementingTypeClassesSpec.*
 
   "semigroups & monoids" in {
 

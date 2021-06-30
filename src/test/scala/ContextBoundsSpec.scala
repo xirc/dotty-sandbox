@@ -30,7 +30,7 @@ object ContextBoundsSpec {
 
 /** [[https://dotty.epfl.ch/docs/reference/contextual/context-bounds.html Context Bounds]] */
 final class ContextBoundsSpec extends BaseSpec {
-  import ContextBoundsSpec._
+  import ContextBoundsSpec.*
 
   "Context Bounds" in {
 

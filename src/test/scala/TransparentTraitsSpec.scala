@@ -17,12 +17,12 @@ object TransparentTraitsSpec {
 /** [[https://dotty.epfl.ch/docs/reference/other-new-features/transparent-traits.html Transparent Traits]]
   */
 final class TransparentTraitsSpec extends BaseSpec {
-  import TransparentTraitsSpec._
-  import TransparentTraitsSpecHelper._
+  import TransparentTraitsSpec.*
+  import TransparentTraitsSpecHelper.*
 
   "Non Transparent Trait" in {
 
-    import NonTransparent._
+    import NonTransparent.*
     val xs = Set(Circle, Square)
     val expectedElementType =
       "TransparentTraitsSpec.NonTransparent.ShapeType & TransparentTraitsSpec.NonTransparent.ConcreteType"
@@ -32,7 +32,7 @@ final class TransparentTraitsSpec extends BaseSpec {
 
   "Transparent Trait" in {
 
-    import Transparent._
+    import Transparent.*
     val xs = Set(Circle, Square)
     val expectedElementType =
       "TransparentTraitsSpec.Transparent.ShapeType"

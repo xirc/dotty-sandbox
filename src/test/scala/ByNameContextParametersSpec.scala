@@ -34,17 +34,17 @@ object ByNameContextParametersSpec {
   *   - [[https://docs.scala-lang.org/sips/byname-implicits.html#motivating-examples SIP-NN - BYNAME IMPLICIT ARGUMENTS]]
   */
 final class ByNameContextParametersSpec extends BaseSpec {
-  import ByNameContextParametersSpec._
+  import ByNameContextParametersSpec.*
 
   "show(HNil)" in {
-    import HList._
+    import HList.*
 
     assert(HNil.show == "")
 
   }
 
   "abc" in {
-    import HList._
+    import HList.*
 
     val xs = HCons(1, HCons(true, HCons("a", HNil)))
     assert(xs.show == "1,true,a")
