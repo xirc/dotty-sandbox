@@ -19,26 +19,26 @@ object TypeClassDerivationSpec {
         case s: Mirror.SumOf[T]     => eqSum(s, elemInstances)
         case p: Mirror.ProductOf[T] => eqProduct(p, elemInstances)
 
-    inline def summonAll[T <: Tuple]: List[Eq[_]] =
+    inline def summonAll[T <: Tuple]: List[Eq[?]] =
       inline erasedValue[T] match
         case _: EmptyTuple => Nil
         case _: (t *: ts)  => summonInline[Eq[t]] :: summonAll[ts]
 
-    private def eqSum[T](s: Mirror.SumOf[T], elems: List[Eq[_]]): Eq[T] =
+    private def eqSum[T](s: Mirror.SumOf[T], elems: List[Eq[?]]): Eq[T] =
       instance { (x, y) =>
         val ordx = s.ordinal(x)
         val ordy = s.ordinal(y)
         (ordx == ordy) && check(elems(ordx))(x, y)
       }
 
-    private def eqProduct[T](p: Mirror.ProductOf[T], elems: List[Eq[_]]): Eq[T] =
+    private def eqProduct[T](p: Mirror.ProductOf[T], elems: List[Eq[?]]): Eq[T] =
       instance { (x, y) =>
         iterator(x).zip(iterator(y)).zip(elems.iterator).forall { case ((ex, ey), e) =>
           check(e)(ex, ey)
         }
       }
 
-    private def check[T](elem: Eq[_])(x: T, y: T): Boolean =
+    private def check[T](elem: Eq[?])(x: T, y: T): Boolean =
       elem.asInstanceOf[Eq[T]].eqv(x, y)
 
     private def iterator[T](p: T): Iterator[Any] =
@@ -57,7 +57,7 @@ object TypeClassDerivationSpec {
 
 /** [[https://dotty.epfl.ch/docs/reference/contextual/derivation.html Type Class Derivation]] */
 final class TypeClassDerivationSpec extends BaseSpec {
-  import TypeClassDerivationSpec._
+  import TypeClassDerivationSpec.{*, given}
 
   "int" in {
 

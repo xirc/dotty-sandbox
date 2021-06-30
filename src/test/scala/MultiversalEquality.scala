@@ -15,7 +15,7 @@ object MultiversalEquality {
 /** [[https://dotty.epfl.ch/docs/reference/contextual/multiversal-equality.html Multiversal Equality]]
   */
 final class MultiversalEquality extends BaseSpec {
-  import MultiversalEquality._
+  import MultiversalEquality.*
 
   "non-strict" in {
 

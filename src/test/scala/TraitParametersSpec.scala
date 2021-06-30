@@ -28,7 +28,7 @@ object TraitParametersSpec {
 /** [[https://dotty.epfl.ch/docs/reference/other-new-features/trait-parameters.html Trait Parameters]]
   */
 final class TraitParametersSpec extends BaseSpec {
-  import TraitParametersSpec._
+  import TraitParametersSpec.*
 
   "Trait with Parameters" in {
 

@@ -19,7 +19,7 @@ object ImportingGivens {
 
 /** [[https://dotty.epfl.ch/docs/reference/contextual/given-imports.html Importing Givens]] */
 final class ImportingGivens extends BaseSpec {
-  import ImportingGivens._
+  import ImportingGivens.*
 
   "Import using given" in {
 

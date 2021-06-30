@@ -31,7 +31,7 @@ object EnumsSpec {
 /** [[https://dotty.epfl.ch/docs/reference/enums/enums.html Enumerations]]
   */
 final class EnumsSpec extends BaseSpec {
-  import EnumsSpec._
+  import EnumsSpec.*
 
   "basic" in {
 

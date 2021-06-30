@@ -59,7 +59,7 @@ object ExtensionMethodsSpec {
 
 /** [[https://dotty.epfl.ch/docs/reference/contextual/extension-methods.html Extension Methods]] */
 final class ExtensionMethodsSpec extends BaseSpec {
-  import ExtensionMethodsSpec._
+  import ExtensionMethodsSpec.*
 
   "Extension Methods" in {
 

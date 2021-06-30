@@ -16,7 +16,7 @@ object UnionTypesSpec {
 /** [[https://dotty.epfl.ch/docs/reference/new-types/union-types.html Union Types]]
   */
 final class UnionTypesSpec extends BaseSpec {
-  import UnionTypesSpec._
+  import UnionTypesSpec.*
 
   "UnionType can represent Option[T]" in {
 

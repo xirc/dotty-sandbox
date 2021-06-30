@@ -3,6 +3,10 @@ lazy val root = project
   .settings(
     name := "scala3-sandbox",
     scalaVersion := "3.0.0",
+    scalacOptions ++= Seq(
+      "-source",
+      "future",
+    ),
     libraryDependencies ++= Seq(
       "org.scalactic" %% "scalactic" % "3.2.9",
       "org.scalatest" %% "scalatest" % "3.2.9" % Test,

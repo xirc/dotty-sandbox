@@ -29,7 +29,7 @@ object UniversalApplyMethodsSpec {
 /** [[https://dotty.epfl.ch/docs/reference/other-new-features/creator-applications.html Universal Apply Methods]]
   */
 final class UniversalApplyMethodsSpec extends BaseSpec {
-  import UniversalApplyMethodsSpec._
+  import UniversalApplyMethodsSpec.*
 
   "ClassA" in {
 

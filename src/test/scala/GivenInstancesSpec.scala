@@ -50,7 +50,7 @@ object GivenInstancesSpec {
 
 /** [[https://dotty.epfl.ch/docs/reference/contextual/givens.html Given Instances]] */
 final class GivenInstancesSpec extends BaseSpec {
-  import GivenInstancesSpec._
+  import GivenInstancesSpec.*
 
   "IntShow" in {
 

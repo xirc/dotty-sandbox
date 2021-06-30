@@ -31,7 +31,7 @@ object ImplicitConversionsSpec {
 
 /** [[https://dotty.epfl.ch/docs/reference/contextual/conversions.html Implicit Conversions]] */
 final class ImplicitConversionsSpec extends BaseSpec {
-  import ImplicitConversionsSpec._
+  import ImplicitConversionsSpec.*
   import scala.language.implicitConversions
 
   "Box[Int]" in {
@@ -49,7 +49,7 @@ final class ImplicitConversionsSpec extends BaseSpec {
   }
 
   "Magnet Pattern" in {
-    import MagnetPattern._
+    import MagnetPattern.*
 
     assert(showAsInt(1) == 1)
     assert(showAsInt("abc") == 3)
