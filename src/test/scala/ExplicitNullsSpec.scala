@@ -54,7 +54,7 @@ final class ExplicitNullsSpec extends BaseSpec {
 
   "Match Case" in {
 
-    val s: String | Null = "abc"
+    val s: Matchable & (String | Null) = "abc"
     val t = s match
       case _: String => "not null"
       case _         => "null"
