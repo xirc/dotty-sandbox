@@ -6,7 +6,6 @@ lazy val root = project
     scalacOptions ++= Seq(
       "-source",
       "future",
-      "-Yexplicit-nulls",
       "-Ysafe-init",
     ),
     libraryDependencies ++= Seq(
