@@ -14,21 +14,23 @@ lazy val root = project
     ),
   )
 
-addCommandAlias(
-  "ciFormat",
-  Seq(
-    "scalafmtSbt",
-    "scalafmtAll",
-  ).mkString(";"),
-)
+lazy val ciFormat = taskKey[Unit]("CI format")
+ciFormat :=
+  Def
+    .sequential(
+      Compile / scalafmtSbt,
+      scalafmtAll,
+    )
+    .value
 
-addCommandAlias(
-  "ciCheck",
-  Seq(
-    "clean",
-    "scalafmtSbtCheck",
-    "scalafmtCheckAll",
-    "Test/compile",
-    "test",
-  ).mkString(";"),
-)
+lazy val ciCheck = taskKey[Unit]("CI check")
+ciCheck :=
+  Def
+    .sequential(
+      clean,
+      Compile / scalafmtSbtCheck,
+      scalafmtCheckAll,
+      Test / compile,
+      Test / test,
+    )
+    .value
