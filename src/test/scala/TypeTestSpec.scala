@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 import scala.reflect.{TypeTest, Typeable}
 
 object TypeTestSpec {

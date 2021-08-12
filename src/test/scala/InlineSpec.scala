@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 import java.util.concurrent.atomic.AtomicInteger
 
 object InlineSpec {

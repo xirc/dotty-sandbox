@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 object ByNameContextParametersSpec {
 
   trait Show[A]:

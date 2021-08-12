@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 import scala.runtime.Nothing$
 
 object OptionLessPatternMatchingSpec {

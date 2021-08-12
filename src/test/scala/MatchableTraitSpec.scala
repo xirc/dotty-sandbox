@@ -1,4 +1,5 @@
 import MatchableTraitSpec.Second
+import testing.BaseSpec
 
 object MatchableTraitSpec {
 

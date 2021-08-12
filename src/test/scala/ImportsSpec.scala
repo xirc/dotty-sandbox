@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 object ImportsSpec {
 
   object A:

@@ -1,4 +1,5 @@
 import ProgrammaticStructuralTypesSpec.MyCloseable
+import testing.BaseSpec
 
 object ProgrammaticStructuralTypesSpec {
 

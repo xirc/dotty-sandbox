@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 object TargetNameAnnotationSpec {
   import scala.annotation.targetName
 

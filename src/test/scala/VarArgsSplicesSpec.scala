@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 /** [[https://docs.scala-lang.org/scala3/reference/changed-features/vararg-splices.html Vararg Splices]]
   */
 final class VarArgsSplicesSpec extends BaseSpec {

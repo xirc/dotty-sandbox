@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 object TraitParametersSpec {
 
   // Trait with Parameters

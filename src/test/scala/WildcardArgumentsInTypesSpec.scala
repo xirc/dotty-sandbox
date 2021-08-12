@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 /** [[https://dotty.epfl.ch/docs/reference/changed-features/wildcards.html Wildcard Arguments in Types]]
   */
 final class WildcardArgumentsInTypesSpec extends BaseSpec {

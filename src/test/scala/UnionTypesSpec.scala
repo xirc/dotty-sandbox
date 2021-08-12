@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 object UnionTypesSpec {
 
   type Option[T] = Some[T] | None.type
