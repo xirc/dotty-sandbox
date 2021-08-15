@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 object MultiversalEquality {
 
   final case class ClassA(value: Int)

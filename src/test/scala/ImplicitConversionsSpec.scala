@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 object ImplicitConversionsSpec {
 
   final case class Box[T](value: T):

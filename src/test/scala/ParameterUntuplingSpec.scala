@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 /** [[https://dotty.epfl.ch/docs/reference/other-new-features/parameter-untupling.html Parameter Untupling]]
   */
 final class ParameterUntuplingSpec extends BaseSpec {

@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 object TypeClassDerivationSpec {
   import scala.deriving.Mirror
   import scala.compiletime.{erasedValue, summonInline}

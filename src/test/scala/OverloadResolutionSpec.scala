@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 object OverloadResolutionSpec {
 
   def f(x: Int)(y: String): String = y * x

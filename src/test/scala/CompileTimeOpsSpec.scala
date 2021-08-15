@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 object CompileTimeOpsSpec {
 
   import scala.compiletime.{constValue, constValueOpt, erasedValue}

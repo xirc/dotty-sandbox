@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 import scala.util.NotGiven
 
 object UsingClauses {

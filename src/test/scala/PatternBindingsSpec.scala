@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 /** [[https://docs.scala-lang.org/scala3/reference/changed-features/pattern-bindings.html Pattern Bindings]]
   */
 final class PatternBindingsSpec extends BaseSpec {

@@ -1,4 +1,5 @@
 import OpaqueTypeAliasSpec.Access.FilePermission
+import testing.BaseSpec
 
 object OpaqueTypeAliasSpec {
 

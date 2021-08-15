@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 private final class ControlStructuresExample extends BaseSpec {
 
   "if/else" in {

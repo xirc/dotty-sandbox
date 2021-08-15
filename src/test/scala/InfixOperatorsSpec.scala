@@ -1,4 +1,5 @@
 import InfixOperatorsSpec.Logarithm
+import testing.BaseSpec
 
 import scala.annotation.targetName
 

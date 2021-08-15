@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 object ContextBoundsSpec {
 
   def maximum[T: Ordering](xs: T*): T =

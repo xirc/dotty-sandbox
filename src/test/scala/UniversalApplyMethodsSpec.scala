@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 object UniversalApplyMethodsSpec {
 
   // All constructor proxies of ClassA are created.

@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 object AutomaticEtaExpansionSpec {
 
   def plus(x: Int)(y: Int): Int = x + y

@@ -1,3 +1,5 @@
+import testing.BaseSpec
+
 /** [[https://docs.scala-lang.org/scala3/reference/changed-features/match-syntax.html Match Expressions]]
   */
 final class MatchExpressionsSpec extends BaseSpec {
