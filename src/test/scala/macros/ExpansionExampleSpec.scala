@@ -9,7 +9,7 @@ final class ExpansionExampleSpec extends BaseSpec {
   "sum" in {
 
     val arr = Array(1, 2, 3, 4, 5)
-    (sum(arr) == 15)
+    assert(sum(arr) == 15)
 
   }
 
