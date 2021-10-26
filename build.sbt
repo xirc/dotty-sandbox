@@ -9,8 +9,8 @@ lazy val root = project
       "-Ysafe-init",
     ),
     libraryDependencies ++= Seq(
-      "org.scalactic" %% "scalactic" % "3.2.9",
-      "org.scalatest" %% "scalatest" % "3.2.9" % Test,
+      "org.scalactic" %% "scalactic" % "3.2.10",
+      "org.scalatest" %% "scalatest" % "3.2.10" % Test,
     ),
   )
 
