@@ -90,9 +90,10 @@ object CompileTimeOpsSpec {
       case _                               => None
     }
 
-    // Could we make this `transparent`?
-    inline def defaultOf[T]: T =
-      summonInline[DefaultValueContext[T]].defaultValue
+    transparent inline def defaultOf[T](using context: DefaultValueContext[T]): T = {
+      // summonInline[DefaultValueContext[T]].defaultValue
+      context.defaultValue
+    }
 
   }
 
