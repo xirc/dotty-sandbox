@@ -40,7 +40,6 @@ object CompileTimeOpsSpec {
 
   object DefaultValueUsingErasedValue {
 
-    // Type Class implementation seems better than this
     transparent inline def defaultValue[T <: Matchable] =
       inline erasedValue[T] match {
         case _: Int     => 0
@@ -59,7 +58,6 @@ object CompileTimeOpsSpec {
 
     case class Succ[N <: Nat](predecessor: N) extends Nat
 
-    // erasedValue seems better with ADTs
     transparent inline def toIntT[N <: Nat]: Int =
       inline erasedValue[N] match
         case _: Zero.type => 0
@@ -90,9 +88,10 @@ object CompileTimeOpsSpec {
       case _                               => None
     }
 
-    // Could we make this `transparent`?
-    inline def defaultOf[T]: T =
-      summonInline[DefaultValueContext[T]].defaultValue
+    transparent inline def defaultOf[T](using context: DefaultValueContext[T]): T = {
+      // summonInline[DefaultValueContext[T]].defaultValue
+      context.defaultValue
+    }
 
   }
 
@@ -169,11 +168,7 @@ final class CompileTimeOpsSpec extends BaseSpec {
 
   "error" ignore {
 
-    // Not working at this point
-    /** assertDoesNotCompile( """
-      * |failOnCompileTime("should be failure")
-      * |""".stripMargin, )
-      */
+    // failOnCompileTime("should be failure")
 
   }
 

@@ -1,6 +1,8 @@
-import scala.quoted.*
+package macros
 
-object TransparentTraitsSpecHelper {
+import scala.quoted.{Expr, Quotes, Type}
+
+object ShowType {
 
   inline def showElementType[T](xs: IterableOnce[T]): String =
     showType[T]
