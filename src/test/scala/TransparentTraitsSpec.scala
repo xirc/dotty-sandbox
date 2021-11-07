@@ -20,7 +20,7 @@ object TransparentTraitsSpec {
   */
 final class TransparentTraitsSpec extends BaseSpec {
   import TransparentTraitsSpec.*
-  import TransparentTraitsSpecHelper.*
+  import macros.ShowType.*
 
   "Non Transparent Trait" in {
 
