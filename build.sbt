@@ -1,18 +1,14 @@
-lazy val root = project
-  .in(file("."))
-  .settings(
-    name := "scala3-sandbox",
-    scalaVersion := "3.1.0",
-    scalacOptions ++= Seq(
-      "-source",
-      "future",
-      "-Ysafe-init",
-    ),
-    libraryDependencies ++= Seq(
-      "org.scalactic" %% "scalactic" % "3.2.10",
-      "org.scalatest" %% "scalatest" % "3.2.10" % Test,
-    ),
-  )
+name := "scala3-sandbox"
+ThisBuild / scalaVersion := "3.1.0"
+ThisBuild / scalacOptions ++= Seq(
+  "-source",
+  "future",
+  "-Ysafe-init",
+)
+ThisBuild / libraryDependencies ++= Seq(
+  "org.scalactic" %% "scalactic" % "3.2.10",
+  "org.scalatest" %% "scalatest" % "3.2.10" % Test,
+)
 
 lazy val ciFormat = taskKey[Unit]("CI format")
 ciFormat :=
