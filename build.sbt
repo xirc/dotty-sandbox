@@ -2,7 +2,7 @@ lazy val root = project
   .in(file("."))
   .settings(
     name := "scala3-sandbox",
-    scalaVersion := "3.0.2",
+    scalaVersion := "3.1.0",
     scalacOptions ++= Seq(
       "-source",
       "future",
