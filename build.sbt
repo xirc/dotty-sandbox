@@ -1,5 +1,5 @@
 name := "scala3-sandbox"
-ThisBuild / scalaVersion := "3.1.0"
+ThisBuild / scalaVersion := "3.1.1"
 ThisBuild / scalacOptions ++= Seq(
   "-source",
   "future",
