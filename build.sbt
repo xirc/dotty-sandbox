@@ -7,7 +7,7 @@ ThisBuild / scalacOptions ++= Seq(
 )
 ThisBuild / libraryDependencies ++= Seq(
   "org.scalactic" %% "scalactic" % "3.2.15",
-  "org.scalatest" %% "scalatest" % "3.2.14" % Test,
+  "org.scalatest" %% "scalatest" % "3.2.15" % Test,
 )
 
 lazy val ciFormat = taskKey[Unit]("CI format")
