@@ -1,13 +1,13 @@
 name := "scala3-sandbox"
-ThisBuild / scalaVersion := "3.2.2"
+ThisBuild / scalaVersion := "3.3.0"
 ThisBuild / scalacOptions ++= Seq(
   "-source",
   "future",
   "-Ysafe-init",
 )
 ThisBuild / libraryDependencies ++= Seq(
-  "org.scalactic" %% "scalactic" % "3.2.15",
-  "org.scalatest" %% "scalatest" % "3.2.15" % Test,
+  "org.scalactic" %% "scalactic" % "3.2.16",
+  "org.scalatest" %% "scalatest" % "3.2.16" % Test,
 )
 
 lazy val ciFormat = taskKey[Unit]("CI format")
