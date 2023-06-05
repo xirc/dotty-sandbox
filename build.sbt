@@ -6,7 +6,7 @@ ThisBuild / scalacOptions ++= Seq(
   "-Ysafe-init",
 )
 ThisBuild / libraryDependencies ++= Seq(
-  "org.scalactic" %% "scalactic" % "3.2.15",
+  "org.scalactic" %% "scalactic" % "3.2.16",
   "org.scalatest" %% "scalatest" % "3.2.16" % Test,
 )
 
